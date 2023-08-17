@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Segmenting Known Objects and Unseen Unknowns without Prior Knowledge, ICCV 2023">
+  <meta name="keywords" content="segmentation, out-of-distribution, unknown objects, open-set, panoptic segmentation, unseen unknowns, ICCV 2023">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Segmenting Known Objects and Unseen Unknowns without Prior Knowledge</title>
+  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V8Q74RYJ63"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V8Q74RYJ63');
+</script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body" style="padding-top:6rem">
+  <!-- style="background-color: rgb(240,240,240);"-->
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Segmenting Known Objects and Unseen Unknowns without Prior Knowledge</h1>
+
+          <div class="is-size-4 publication-authors">
+            <span class="author-block" style="padding-top:1.5rem; padding-bottom:1rem;"><b>ICCV 2023</b></span>
+          </div>
+          
+          <div class="is-size-5 publication-authors" style="padding-bottom:1.5rem;">
+            <span class="author-block">
+              <a href="https://www.cs.cit.tum.de/camp/members/stefano-gasperini/">Stefano Gasperini</a><sup>1,2</sup></span>
+            <span class="author-block">
+              <a>Alvaro Marcos-Ramiro</a><sup>2</sup></span>
+            </span>
+            <span class="author-block">
+              <a>Michael Schmidt</a><sup>2</sup>
+            </span>
+            </br>
+            <span class="author-block">
+              <a href="https://www.cs.cit.tum.de/camp/members/cv-nassir-navab/nassir-navab/">Nassir Navab</a><sup>1</sup>
+            </span>
+            <span class="author-block">
+              <a>Benjamin Busam</a><sup>1</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://www.cs.cit.tum.de/camp/members/senior-research-scientists/federico-tombari/">Federico Tombari</a><sup>1,3</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors"  style="padding-bottom:1rem">
+            <span class="author-block"><sup>1</sup> Technical University of Munich</span>
+            <span class="author-block"><sup>2</sup> BMW Group</span>
+            <span class="author-block"><sup>3</sup> Google</span>
+          </div>
+            
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!--span class="link-block">
+                <a href="tbd_link"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>ICCV Paper</span>
+                </a>
+              </span-->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2209.05407"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv preprint</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:1rem;padding-bottom:4rem">
+  <div class="container is-max-desktop" style="background-color: rgb(240,240,240);padding-top:4rem;padding-bottom:4rem">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="margin-bottom:0.7rem;line-height:3rem;">How to segment<br>known objects and unseen unknowns,<br>without knowing anything about unknowns?</h2>
+        <div>
+          <!--p>This while doing panoptic segmentation of known areas.</p-->
+        </div>
+        <div class="">
+          <img src="images/bears.png"></img>
+        </div>
+        <div>
+          <p>Our model had never seen any bear before.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <!--div class="columns is-centered has-text-justified">
+      <div class="column is-four-fifths" style="padding-bottom:3rem">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+           abstract tbd
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+    <div class="columns is-centered has-text-justified">
+      <div class="column is-four-fifths" style="padding-bottom:3rem">
+        <h2 class="title is-3" style="margin-bottom:0">Motivation</h2>
+        <div class="">
+          <img src="images/teaser.png"></img>
+        </div>
+        <p>
+        tbd
+</br></br>
+tbd
+        </p>
+      </div>
+    </div>
+        <div class="columns is-centered has-text-justified">
+      <div class="column is-four-fifths" style="padding-bottom:3rem">
+        <h2 class="title is-3" style="margin-bottom:1rem">Holistic Segmentation Setting</h2>
+        <div class="">
+          <img src="images/setting.png"></img>
+        </div>
+        <p>
+tbd
+        </p>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-justified">
+      <div class="column is-four-fifths" style="padding-bottom:3rem">
+        <h2 class="title is-3" style="margin-bottom:1rem">Method</h2>
+        <div class="" style="margin-bottom:1rem">
+          <img src="images/method.png"></img>
+        </div>
+        <p>
+tbd        
+        </p>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-justified">
+      <div class="column is-four-fifths" style="padding-bottom:3rem">
+        <h2 class="title is-3" style="margin-bottom:0">Results</h2>
+        <div class="">
+          <img src="images/coco.png"></img>
+        </div>
+        <p>
+tbd
+</br></br>
+In our <a href="https://arxiv.org/pdf/2209.05407.pdf">ICCV paper</a>, we demonstrate the <b>effectiveness of </b>
+
+        </p>
+      </div>
+    </div>
+       
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section" style="padding-top:1.5rem;padding-bottom:6rem;" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre style="background-color: rgb(240,240,240);"><code>@inproceedings{gasperini2023holistic_seg,
+  title={Segmenting Known Objects and Unseen Unknowns without Prior Knowledge},
+  author={Gasperini, Stefano and Marcos-Ramiro, Alvaro and Schmidt, Michael and Navab, Nassir and Busam, Benjamin and Tombari, Federico},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  year={2023}
+}
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer" style="padding-bottom:3rem">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8 has-text-justified">
+        <div class="content">
+          <p>
+            This website was adapted from <a href"https://md4all.github.io/">md4all</a> and is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            You can use the <a
+              href="https://github.com/holisticseg/holisticseg.github.io">source code of this website</a>, we ask that you link back to this page in the footer. Please also remember to remove the analytics code included in the website's header.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
