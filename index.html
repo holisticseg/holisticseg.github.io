@@ -110,7 +110,7 @@
   <div class="container is-max-desktop" style="background-color: rgb(240,240,240);padding-top:4rem;padding-bottom:4rem">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3" style="margin-bottom:0.7rem;line-height:3rem;">How to segment<br>known objects and unseen unknowns,<br>without knowing anything about unknowns?</h2>
+        <h2 class="title is-3" style="margin-bottom:0.7rem;line-height:3rem;">How to segment unseen, unknown objects without knowledge about them?</h2>
         <div>
           <!--p>This while doing panoptic segmentation of known areas.</p-->
         </div>
@@ -146,9 +146,10 @@
           <img src="images/teaser.png"></img>
         </div>
         <p>
-        tbd
+Segmentation methods assign a known class to each pixel given in input. Even for state-of-the-art approaches, this inevitably enforces decisions that systematically lead to <b>wrong predictions for objects outside the training categories</b>. However, robustness against out-of-distribution samples and corner cases is crucial to avoid dangerous consequences in safety-critical settings, such as in autonomous driving.
 </br></br>
-tbd
+Since real-world datasets cannot contain enough data points to adequately sample the long tail of the underlying distribution, models must be able to deal with completely unseen and unknown scenarios.
+This motivates the need for a method capable of working with training categories, known objects, and especially unseen, unknown objects outside the training data distribution.
         </p>
       </div>
     </div>
@@ -159,7 +160,9 @@ tbd
           <img src="images/setting.png"></img>
         </div>
         <p>
-tbd
+Previous methods either ignored this problem (panoptic segmentation) or targeted it by either re-identifying already-seen unlabeled objects (open-set panoptic segmentation) or introducing external knowledge, e.g., via vision-language models (zero-shot learning and open-vocabulary approaches).
+</br></br>
+In this work, we propose to <b>extend segmentation with a new setting</b> which we term <b>holistic segmentation</b>. Holistic segmentation aims to identify and separate objects of unseen, unknown categories into instances without prior knowledge while performing panoptic segmentation of known classes.
         </p>
       </div>
     </div>
@@ -170,7 +173,7 @@ tbd
           <img src="images/method.png"></img>
         </div>
         <p>
-tbd        
+We tackle this new holistic segmentation problem with U3HS. U3HS finds unknowns as highly uncertain regions and clusters their corresponding instance-aware embeddings into individual objects. For the first time in panoptic segmentation with unknown objects, our <b>U3HS is trained without unknown categories</b>, reducing assumptions, simplifying the training data collection, and leaving the settings as unconstrained as in real-life scenarios.
         </p>
       </div>
     </div>
@@ -181,10 +184,9 @@ tbd
           <img src="images/coco.png"></img>
         </div>
         <p>
-tbd
+The figure shows example predictions of U3HS on out-of-distribution data from MS COCO. Remarkably, the model had never seen images containing bears or frisbees (part of the held-out classes), nor had any information about them. Still, the proposed U3HS could robustly <b>segment the unseen, unknown objects despite their high inter-class similarity</b>. Simultaneously, U3HS performed a reasonable panoptic segmentation of known classes.
 </br></br>
-In our <a href="https://arxiv.org/pdf/2209.05407.pdf">ICCV paper</a>, we demonstrate the <b>effectiveness of </b>
-
+In our <a href="https://arxiv.org/pdf/2209.05407.pdf">ICCV paper</a>, we demonstrate the effectiveness of U3HS for this new, challenging, and assumptions-free setting called holistic segmentation with extensive experiments on public data from MS COCO, Cityscapes, and Lost&Found.
         </p>
       </div>
     </div>
@@ -222,7 +224,7 @@ In our <a href="https://arxiv.org/pdf/2209.05407.pdf">ICCV paper</a>, we demonst
           </p>
           <p>
             You can use the <a
-              href="https://github.com/holisticseg/holisticseg.github.io">source code of this website</a>, we ask that you link back to this page in the footer. Please also remember to remove the analytics code included in the website's header.
+              href="https://github.com/holisticseg/holisticseg.github.io">source code of this website</a>, we ask that you link back to this page in the footer. Please also remember to remove the analytics code in the website's header.
           </p>
         </div>
       </div>
