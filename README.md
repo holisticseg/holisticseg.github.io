@@ -1,6 +1,6 @@
-# Segmenting Known Objects and Unseen Unknowns without Prior Knowledge - ICCV 2023
+# Segmenting Known Objects and Unseen Unknowns without Prior Knowledge - Holistic Segmentation - ICCV 2023
 
-This is the repository that contains source code for the [holisticseg.github.io website](https://holisticseg.github.io).
+This repository contains the source code for the [holisticseg.github.io website](https://holisticseg.github.io).
 
 If you find our research useful for your work please cite:
 ```
